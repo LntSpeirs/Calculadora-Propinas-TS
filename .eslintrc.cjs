@@ -1,0 +1,33 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2021: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh'],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    indent: ['error', 2],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
+    'no-unused-vars': ['error'],
+    'space-before-blocks': ['error', 'always'],
+    'no-redeclare': ['error'],
+    'prefer-const': ['warn'],
+    'max-len': ['error', { code: 120 }],
+    'space-infix-ops': ['error'],
+    'no-console': ['warn'],
+    'no-inner-declarations': ['error'],
+    curly: ['error', 'all'],
+    'comma-dangle': ['error', 'never'],
+    'one-var': ['error', 'never'],
+    'func-names': ['warn'],
+  },
+};
